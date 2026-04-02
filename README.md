@@ -21,11 +21,11 @@ This package is currently in development and **not yet published to npm**. To us
 1. **Clone the project** into your workspace.
 2. **Install dependencies**:
    ```bash
-   npm install mtl-vdom
+   npm install mlt-vdom
    ```
 3. **Import from source**:
    ```javascript
-   import { Mlt } from 'mtl-vdom';
+   import { Mlt } from 'mlt-vdom';
    ```
 
 ---
@@ -48,7 +48,7 @@ Every element in the library follows a consistent constructor signature:
 ## 💻 Usage Example
 
 ```javascript
-import { Mlt } from 'mtl-vdom';
+import { Mlt } from 'mlt-vdom';
 
 // 1. Create the root project
 const mlt = new Mlt({ id: 'main_project' });
