@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="C" version="7.37.0" xmlns="http://www.mltframework.org/bin/view/MLT/" id="main_project" title="Automated Export 2026">
+  <producer id="producer_0">
+    <property name="resource">sample_video.mp4</property>
+    <property name="mlt_service">avformat</property>
+  </producer>
+  <playlist id="main_bin">
+    <entry in="0" out="250" producer="producer_0"/>
+  </playlist>
+  <tractor id="timeline_1">
+    <multitrack>
+      <track producer="main_bin"/>
+    </multitrack>
+  </tractor>
+</mlt>

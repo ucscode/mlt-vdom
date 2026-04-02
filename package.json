@@ -1,0 +1,41 @@
+{
+    "name": "mlt-vdom",
+    "version": "1.0.0",
+    "description": "A strictly regulated, object-oriented Virtual DOM for the MLT Multimedia Framework.",
+    "type": "module",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "src/",
+        "README.md",
+        "LICENSE"
+    ],
+    "keywords": [
+        "mlt",
+        "melt",
+        "video-automation",
+        "vdom",
+        "xml-generator",
+        "video-editing",
+        "nle",
+        "multimedia"
+    ],
+    "scripts": {
+        "test": "node --test tests/mlt.js",
+        "prepublishOnly": "npm test"
+    },
+    "author": "ucscode",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ucscode/mlt-vdom.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ucscode/mlt-vdom/issues"
+    },
+    "homepage": "https://github.com/ucscode/mlt-vdom#readme",
+    "dependencies": {
+        "jsdom": "^29.0.1",
+        "xml-formatter": "^3.7.0"
+    }
+}
