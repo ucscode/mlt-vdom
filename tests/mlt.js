@@ -18,10 +18,11 @@ describe('MLT VDOM Core Logic', () => {
         const video = new Mlt.Producer({ id: 'vid_123' });
         const entry = new Mlt.Entry();
 
-        entry.link(video);
+        entry.bind(video);
 
         assert.strictEqual(entry.getAttribute('producer'), 'vid_123');
-        assert.strictEqual(entry.getContents().length, 1);
+        assert.strictEqual(entry.getBoundNode(), video); // Verify the object link
+        assert.strictEqual(entry.getContents().length, 0); // Verify NO XML children were added
     });
 
     test('Reference Safety: Should throw if adding a second reference without removal', () => {
@@ -29,19 +30,19 @@ describe('MLT VDOM Core Logic', () => {
         const v1 = new Mlt.Producer({ id: 'v1' });
         const v2 = new Mlt.Producer({ id: 'v2' });
 
-        entry.link(v1);
+        entry.bind(v1);
 
         assert.throws(() => {
-            entry.link(v2);
-        }, /Link Error/);
+            entry.bind(v2);
+        }, /bind Error/);
     });
 
     test('Reference Removal: Should clear attribute on remove', () => {
         const entry = new Mlt.Entry();
         const video = new Mlt.Producer({ id: 'v1' });
 
-        entry.link(video);
-        entry.unlink(video);
+        entry.bind(video);
+        entry.unbind(video);
 
         assert.strictEqual(entry.getAttribute('producer'), undefined);
         assert.strictEqual(entry.getContents().length, 0);
@@ -61,7 +62,7 @@ describe('MLT VDOM Core Logic', () => {
         producer.add(new Mlt.Property({ name: 'res' }, 'file.mp4'));
 
         const entry = new Mlt.Entry();
-        entry.link(producer);
+        entry.bind(producer);
 
         const playlist = new Mlt.Playlist();
         playlist.add(entry);

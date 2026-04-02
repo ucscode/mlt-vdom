@@ -28,7 +28,7 @@ Every element in the library follows a consistent constructor signature:
 To prevent "Broken XML," the library separates nodes into two distinct functional classes:
 
 * **`ContainerNode` (Type 0):** Structural elements like `Producer`, `Playlist`, or `Tractor`. They use `.add()` to manage multiple children.
-* **`ReferenceNode` (Type 1):** Pointer elements like `Entry` or `Track`. They use `.link()` to point to a source and automatically sync the `producer` attribute.
+* **`ReferenceNode` (Type 1):** Pointer elements like `Entry` or `Track`. They use `.bind()` to point to a source and automatically sync the `producer` attribute.
 
 ---
 
@@ -51,7 +51,7 @@ const playlist = new Mlt.Playlist({ id: 'main_bin' });
 
 // 4. Create an Entry (Links to the Producer)
 const entry = new Mlt.Entry({ in: 0, out: 150 });
-entry.link(producer); // Correct semantic linking
+entry.bind(producer); // Correct semantic linking
 
 // 5. Assemble the Tree
 playlist.add(entry);
@@ -94,8 +94,8 @@ Generates the final XML string. Called only on the root `Mlt` instance.
 | :--- | :--- | :--- |
 | `.add(node)` | **Containers** | Adds a child to the internal stack. Throws if hierarchy is invalid. |
 | `.remove(node)` | **Containers** | Removes a specific child node. |
-| **`.link(node)`** | **References** | Binds a Producer/Playlist. Auto-sets the `producer` ID. |
-| **`.unlink()`** | **References** | Clears the binding and removes the `producer` attribute. |
+| **`.bind(node)`** | **References** | Binds a Producer/Playlist. Auto-sets the `producer` ID. |
+| **`.unbind()`** | **References** | Clears the binding and removes the `producer` attribute. |
 | `.setAttribute(k, v)` | **All** | Manually sets an XML attribute. |
 | `.getAttribute(k)` | **All** | Retrieves an attribute value. |
 

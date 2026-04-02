@@ -2,25 +2,33 @@ import { JSDOM } from 'jsdom';
 import format from 'xml-formatter';
 
 import { MLT_TAG } from './libs/constants.js';
-import { ContainerNode } from './nodes/containernode.js';
+import { ElementNode } from './nodes/elementnode.js';
 import { TextNode as Text } from './nodes/textnode.js';
 
 import { Producer } from './mlt/producer.js';
+import { Chain } from './mlt/chain.js';
+import { Profile } from './mlt/profile.js';
 import { Playlist } from './mlt/playlist.js';
 import { Tractor } from './mlt/tractor.js';
 import { Property } from './mlt/property.js';
 import { Entry } from './mlt/entry.js';
 import { Track } from './mlt/track.js';
 import { Multitrack } from './mlt/multitrack.js';
+import { Filter } from './mlt/filter.js';
+import { Transition } from './mlt/transition.js';
 
-export class Mlt extends ContainerNode {
+export class Mlt extends ElementNode {
+    static Profile = Profile;
     static Property = Property;
     static Producer = Producer;
+    static Chain = Chain;
     static Playlist = Playlist;
     static Entry = Entry;
     static Track = Track;
     static Multitrack = Multitrack;
     static Tractor = Tractor;
+    static Filter = Filter;
+    static Transition = Transition;
     static Text = Text;
 
     constructor(attrs = {}, content = []) {

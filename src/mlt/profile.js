@@ -1,8 +1,8 @@
 import { ElementNode } from '../nodes/elementnode.js';
 import { MLT_TAG } from '../libs/constants.js';
 
-export class Property extends ElementNode {
+export class Profile extends ElementNode {
     constructor(attributes = {}, content = []) {
-        super(MLT_TAG.PROPERTY, attributes, content);
+        super(MLT_TAG.PROFILE, attributes, content);
     }
 }

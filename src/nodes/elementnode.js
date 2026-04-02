@@ -28,15 +28,7 @@ export class ElementNode extends MltNode {
             return this._normalizeAndValidate(item);
         });
 
-        // 3. Sync if this is a Reference Type (called by child classes)
-        if (this.getType() === 1) { // 1 = REFERENCE
-            this._syncProducerAttribute();
-        }
-    }
-
-    /** @abstract - Overridden by ContainerNode or ReferenceNode */
-    getType() {
-        throw new Error('getType() must be implemented by subclass');
+        this._syncProducerAttribute();
     }
 
     setAttribute(k, v) {
@@ -59,6 +51,22 @@ export class ElementNode extends MltNode {
 
     indexOf(node) {
         return this.factory.content.indexOf(node);
+    }
+
+    add(node) {
+        const validatedNode = this._normalizeAndValidate(node);
+        if (!this.factory.content.includes(validatedNode)) {
+            this.factory.content.push(validatedNode);
+        }
+        return this;
+    }
+
+    remove(node) {
+        const index = this.factory.content.indexOf(node);
+        if (index !== -1) {
+            this.factory.content.splice(index, 1);
+        }
+        return this;
     }
 
     /**
@@ -111,13 +119,10 @@ export class ElementNode extends MltNode {
             el.setAttribute(k, v);
         }
 
-        // Only append children for Containers (Type 0)
-        if (this.getType() === 0) {
-            for (const child of this.factory.content) {
-                // If it's another ElementNode, call its _buildNative
-                // If it's a TextNode, it has its own build(doc)
-                el.appendChild(child._buildNative ? child._buildNative(doc) : child.build(doc));
-            }
+        for (const child of this.factory.content) {
+            // If it's another ElementNode, call its _buildNative
+            // If it's a TextNode, it has its own build(doc)
+            el.appendChild(child._buildNative ? child._buildNative(doc) : child.build(doc));
         }
 
         return el;

@@ -6,7 +6,6 @@ export * from './src/libs/factory.js';
 export * from './src/nodes/mltnode.js';
 export * from './src/nodes/textnode.js';
 export * from './src/nodes/elementnode.js';
-export * from './src/nodes/containernode.js';
 export * from './src/nodes/referencenode.js';
 
 // Export the main MLT class which serves as the entry point for users of the library

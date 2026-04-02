@@ -1,7 +1,7 @@
-import { ContainerNode } from '../nodes/containernode.js';
+import { ElementNode } from '../nodes/elementnode.js';
 import { MLT_TAG } from '../libs/constants.js';
 
-export class Playlist extends ContainerNode {
+export class Playlist extends ElementNode {
     constructor(attributes = {}, content = []) {
         super(MLT_TAG.PLAYLIST, attributes, content);
     }
