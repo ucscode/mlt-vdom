@@ -3,7 +3,6 @@ import format from 'xml-formatter';
 
 import { MLT_TAG } from './libs/constants.js';
 import { ElementNode } from './nodes/elementnode.js';
-import { TextNode as Text } from './nodes/textnode.js';
 
 import { Producer } from './mlt/producer.js';
 import { Chain } from './mlt/chain.js';
@@ -29,7 +28,6 @@ export class Mlt extends ElementNode {
     static Tractor = Tractor;
     static Filter = Filter;
     static Transition = Transition;
-    static Text = Text;
 
     constructor(attrs = {}, content = []) {
         const defaultAttrs = {
