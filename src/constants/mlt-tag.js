@@ -1,0 +1,15 @@
+export const MLT_TAG = {
+    MLT: 'mlt',
+    PROFILE: 'profile',
+    PRODUCER: 'producer',
+    PLAYLIST: 'playlist',
+    ENTRY: 'entry',
+    TRACTOR: 'tractor',
+    MULTITRACK: 'multitrack',
+    TRACK: 'track',
+    PROPERTY: 'property',
+    FILTER: 'filter',
+    TRANSITION: 'transition',
+    CHAIN: 'chain',
+    BLANK: 'blank',
+};

@@ -1,5 +1,5 @@
-import { ElementNode } from '../nodes/elementnode.js';
-import { MLT_TAG } from '../libs/constants.js';
+import { ElementNode } from '../node-provider.js';
+import { MLT_TAG } from '../../constants/mlt-tag.js';
 
 export class Property extends ElementNode {
     constructor(attributes = {}, content = []) {

@@ -1,5 +1,5 @@
-import { NodeFactory } from '../libs/factory.js';
-import { ALLOWED_CHILDREN } from '../libs/constants.js';
+import { NodeFactory } from '../../libs/factory.js';
+import { ALLOWED_CHILDREN } from '../../constants/mlt-child-anatomy.js';
 import { MltNode } from './mltnode.js';
 import { TextNode } from './textnode.js';
 
@@ -11,24 +11,13 @@ import { TextNode } from './textnode.js';
 export class ElementNode extends MltNode {
     constructor(tagName, attributes = {}, content = []) {
         super();
+        this.factory = new NodeFactory(tagName, { ...attributes }, []);
 
-        // 1. Initialize factory so it's available for validation messages
-        this.factory = new NodeFactory(
-            tagName,
-            { ...attributes },
-            []
-        );
+        // 1. Normalize content WITHOUT auto-syncing yet
+        const rawContent = Array.isArray(content) ? content : (content ? [content] : []);
 
-        // 2. Normalize and Validate initial content
-        const rawContent = Array.isArray(content)
-            ? content
-            : (content ? [content] : []);
-
-        this.factory.content = rawContent.map((item) => {
-            return this._normalizeAndValidate(item);
-        });
-
-        this._syncProducerAttribute();
+        // 2. Only map content if it's not empty (prevents accidental TextNode creation for empty properties)
+        this.factory.content = rawContent.map(item => this._normalizeAndValidate(item));
     }
 
     setAttribute(k, v) {
@@ -69,11 +58,13 @@ export class ElementNode extends MltNode {
         return this;
     }
 
-    /**
-     * INTERNAL: Normalizes input and validates against ALLOWED_CHILDREN
-     * Prefixed with underscore to indicate "Protected" usage for subclasses.
-     */
+    _allowedChildTags() {
+        return ALLOWED_CHILDREN[this.factory.tagName] || [];
+    }
+
     _normalizeAndValidate(item) {
+        // If the item is already a TextNode or MltNode, keep it.
+        // If it's a string/number, it's a TextNode.
         const isText = typeof item === 'string' || typeof item === 'number';
         const node = isText ? new TextNode(item) : item;
 
@@ -82,47 +73,30 @@ export class ElementNode extends MltNode {
         }
 
         const childTag = isText ? '#text' : node.factory?.tagName;
-        const allowedTags = ALLOWED_CHILDREN[this.factory.tagName] || [];
+        const allowedTags = this._allowedChildTags();
 
+        // Fix: If no tags are explicitly allowed (like in Property), assume #text is fine
         if (allowedTags.length > 0 && !allowedTags.includes(childTag)) {
-            throw new Error(
-                `Hierarchy Error: <${childTag}> is not a valid child for <${this.factory.tagName}>`
-            );
+            throw new Error(`Hierarchy Error: <${childTag}> is not valid for <${this.factory.tagName}>`);
         }
 
         return node;
     }
 
-    /**
-     * INTERNAL: Syncs the 'producer' attribute with the linked node's ID.
-     */
-    _syncProducerAttribute() {
-        const node = this.factory.content[0];
-        if (node && typeof node.getAttribute === 'function') {
-            const id = node.getAttribute('id');
-            if (id) {
-                this.setAttribute('producer', id);
-                return;
-            }
-        }
-        this.removeAttribute('producer');
-    }
-
-    /**
-     * This builds a single XML element and its children.
-     * It returns a native DOM node, not a string.
-     */
     _buildNative(doc) {
         const el = doc.createElement(this.factory.tagName);
 
         for (const [k, v] of Object.entries(this.factory.attributes)) {
-            el.setAttribute(k, v);
+            // Check for valid XML Name and ensure we don't dump null/undefined values
+            if (isNaN(k) && k !== '' && v !== undefined && v !== null) {
+                el.setAttribute(k, String(v));
+            }
         }
 
         for (const child of this.factory.content) {
-            // If it's another ElementNode, call its _buildNative
-            // If it's a TextNode, it has its own build(doc)
-            el.appendChild(child._buildNative ? child._buildNative(doc) : child.build(doc));
+            // Logic fix: Ensure child build methods are called correctly
+            const childNode = child._buildNative ? child._buildNative(doc) : child.build(doc);
+            if (childNode) el.appendChild(childNode);
         }
 
         return el;

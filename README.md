@@ -59,7 +59,7 @@ mlt.add(producer);
 mlt.add(playlist);
 
 // 6. Build the XML String
-console.log(mlt.build(true));
+console.log(mlt.dump(true, 'optional/save/path/file.mlt'));
 ```
 
 ### 📝 Expected Output

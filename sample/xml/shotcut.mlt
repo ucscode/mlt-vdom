@@ -1,0 +1,462 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.37.0" title="Shotcut version 26.2.26" producer="main_bin">
+  <profile description="HD 1080p 25 fps" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <chain id="chain0" out="00:02:05.040">
+    <property name="length">00:02:05.080</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Downloads/keep-climbing.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">fltp</property>
+    <property name="meta.media.0.codec.sample_rate">44100</property>
+    <property name="meta.media.0.codec.channels">2</property>
+    <property name="meta.media.0.codec.layout">stereo</property>
+    <property name="meta.media.0.codec.name">mp3float</property>
+    <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
+    <property name="meta.media.0.codec.bit_rate">320000</property>
+    <property name="meta.attr.0.stream.encoder.markup">Lavf</property>
+    <property name="meta.attr.encoder.markup">Google</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-04-01T06:16:43</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">ed872e7cebf1c90c52462b7231b64854</property>
+    <property name="ignore_points">1</property>
+    <property name="shotcut:caption">keep-climbing.mp3</property>
+  </chain>
+  <chain id="chain1" out="00:02:41.960">
+    <property name="length">00:02:42.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Downloads/level.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">fltp</property>
+    <property name="meta.media.0.codec.sample_rate">44100</property>
+    <property name="meta.media.0.codec.channels">2</property>
+    <property name="meta.media.0.codec.layout">stereo</property>
+    <property name="meta.media.0.codec.name">mp3float</property>
+    <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
+    <property name="meta.media.0.codec.bit_rate">320000</property>
+    <property name="meta.attr.0.stream.encoder.markup">Lavf</property>
+    <property name="meta.attr.encoder.markup">Google</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-04-01T06:29:28</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">cf8c334e6d944ae0309a5d8a5086eba4</property>
+  </chain>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Pictures/who-would-win/thor-vs-zeus/download.jpeg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">768</property>
+    <property name="meta.media.height">512</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:hash">8ea07c74198cc1ceced36dbf0dc6164f</property>
+    <property name="creation_time">2025-07-15T05:56:42</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <chain id="chain2" out="00:00:48.320">
+    <property name="length">00:00:48.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Downloads/video.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">2</property>
+    <property name="meta.media.0.stream.type">video</property>
+    <property name="meta.media.0.stream.frame_rate">24</property>
+    <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+    <property name="meta.media.0.codec.width">768</property>
+    <property name="meta.media.0.codec.height">1344</property>
+    <property name="meta.media.0.codec.rotate">0</property>
+    <property name="meta.media.0.codec.pix_fmt">yuv420p</property>
+    <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+    <property name="meta.media.0.codec.colorspace">709</property>
+    <property name="meta.media.0.codec.name">h264</property>
+    <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
+    <property name="meta.media.0.codec.bit_rate">1440406</property>
+    <property name="meta.attr.0.stream.handler_name.markup">VideoHandler</property>
+    <property name="meta.attr.0.stream.vendor_id.markup">[0][0][0][0]</property>
+    <property name="meta.attr.0.stream.encoder.markup">Lavc61.3.100 libx264</property>
+    <property name="meta.media.1.stream.type">audio</property>
+    <property name="meta.media.1.codec.sample_fmt">fltp</property>
+    <property name="meta.media.1.codec.sample_rate">44100</property>
+    <property name="meta.media.1.codec.channels">2</property>
+    <property name="meta.media.1.codec.layout">stereo</property>
+    <property name="meta.media.1.codec.name">aac</property>
+    <property name="meta.media.1.codec.long_name">AAC (Advanced Audio Coding)</property>
+    <property name="meta.media.1.codec.bit_rate">131978</property>
+    <property name="meta.attr.1.stream.handler_name.markup">SoundHandler</property>
+    <property name="meta.attr.1.stream.vendor_id.markup">[0][0][0][0]</property>
+    <property name="meta.attr.major_brand.markup">isom</property>
+    <property name="meta.attr.minor_version.markup">512</property>
+    <property name="meta.attr.compatible_brands.markup">isomiso2avc1mp41</property>
+    <property name="meta.attr.encoder.markup">Lavf61.1.100</property>
+    <property name="seekable">1</property>
+    <property name="meta.media.sample_aspect_num">1</property>
+    <property name="meta.media.sample_aspect_den">1</property>
+    <property name="format">3</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2026-04-01T06:31:45</property>
+    <property name="vstream">0</property>
+    <property name="meta.media.frame_rate_num">24</property>
+    <property name="meta.media.frame_rate_den">1</property>
+    <property name="meta.media.colorspace">709</property>
+    <property name="meta.media.color_trc">2</property>
+    <property name="meta.media.has_b_frames">2</property>
+    <property name="meta.media.width">768</property>
+    <property name="meta.media.height">1344</property>
+    <property name="meta.media.aspect_ratio">1</property>
+    <property name="meta.media.color_range">mpeg</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">a8d307134681faa0cd61525231e2de77</property>
+  </chain>
+  <producer id="producer1" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Downloads/Visual content (4).webp</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">750</property>
+    <property name="meta.media.height">864</property>
+    <property name="mlt_service">qimage</property>
+    <property name="creation_time">2026-03-09T11:50:19</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">f36f6c5095be281e7cd579d409f6e33a</property>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Pictures/who-would-win/thor-vs-zeus/image (2).png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">1152</property>
+    <property name="meta.media.height">896</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:hash">3eec68a0c65f98bc15e5937f861e4759</property>
+    <property name="creation_time">2025-07-15T05:04:34</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Pictures/who-would-win/thor-vs-zeus/image (1).png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">1152</property>
+    <property name="meta.media.height">896</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:hash">3b08bbb610c4d6ef779be6629a513e54</property>
+    <property name="creation_time">2025-07-15T05:00:38</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main_bin" title="Shotcut version 26.2.26">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:processingMode">Native8Cpu</property>
+    <property name="xml_retain">1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:02:05.040"/>
+    <entry producer="chain1" in="00:00:00.000" out="00:02:41.960"/>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:03.960"/>
+    <entry producer="chain2" in="00:00:00.000" out="00:00:48.320"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:00:03.960"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:03.960"/>
+    <entry producer="producer3" in="00:00:00.000" out="00:00:03.960"/>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:00:12.680">
+    <property name="length">00:00:12.720</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:00:12.680"/>
+  </playlist>
+  <producer id="producer4" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Pictures/who-would-win/thor-vs-zeus/download.jpeg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">768</property>
+    <property name="meta.media.height">512</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:hash">8ea07c74198cc1ceced36dbf0dc6164f</property>
+    <property name="creation_time">2025-07-15T05:56:42</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">download.jpeg</property>
+    <property name="meta.shotcut.vui">1</property>
+    <filter id="filter0" out="00:00:03.960">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.960=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">00:00:01.000</property>
+    </filter>
+    <filter id="filter1" out="00:00:03.960">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fix_rotate_x">00:00:00.000=0;00:00:00.960=0</property>
+      <property name="transition.fill">0</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">00:00:00.000=-1920 0 1920 1080 1;00:00:00.960=0 0 1920 1080 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:01.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+      <property name="disable">1</property>
+    </filter>
+    <filter id="filter2" out="00:00:03.960">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fix_rotate_x">00:00:00.000=0;00:00:03.960=0</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">00:00:00.000=-96 -54 2112 1188 1;00:00:03.960=-192 -54 2112 1188 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:04.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Pictures/who-would-win/thor-vs-zeus/image (2).png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">1152</property>
+    <property name="meta.media.height">896</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:hash">3eec68a0c65f98bc15e5937f861e4759</property>
+    <property name="creation_time">2025-07-15T05:04:34</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">image (2).png</property>
+    <property name="meta.shotcut.vui">1</property>
+    <filter id="filter3" out="00:00:03.960">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fix_rotate_x">00:00:00.000=0;00:00:03.960=0</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">00:00:00.000=0 0 1920 1080 1;00:00:03.960=-96 -54 2112 1188 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:04.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
+    <filter id="filter4" out="00:00:03.960">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fix_rotate_x">0</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">00:00:00.000=-152 -83 2208 1242 1;00:00:00.080=-149 -128 2208 1242 1;00:00:00.160=-2 -141 2208 1242 1;00:00:00.240=-140 -98 2208 1242 1;00:00:00.320=-143 -149 2208 1242 1;00:00:00.400=-196 -60 2208 1242 1;00:00:00.480=-127 -120 2208 1242 1;00:00:00.560=-97 -66 2208 1242 1;00:00:00.640=-57 -66 2208 1242 1;00:00:00.720=-63 -39 2208 1242 1;00:00:00.800=-100 -77 2208 1242 1;00:00:00.880=-113 -39 2208 1242 1;00:00:00.960=-210 -101 2208 1242 1;00:00:01.040=-144 -81 2208 1242 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
+    <filter id="filter5" out="00:00:03.960">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fix_rotate_x">00:00:00.000=0;00:00:03.960=0</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">0</property>
+      <property name="transition.rect">00:00:00.000=0 0 1920 1080 1;00:00:03.960=-96 0 2112 1188 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:04.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Pictures/who-would-win/thor-vs-zeus/image (1).png</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="meta.media.progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="meta.media.width">1152</property>
+    <property name="meta.media.height">896</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:hash">3b08bbb610c4d6ef779be6629a513e54</property>
+    <property name="creation_time">2025-07-15T05:00:38</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">image (1).png</property>
+    <property name="meta.shotcut.vui">1</property>
+    <filter id="filter6" out="00:00:03.960">
+      <property name="mlt_service">avfilter.noise</property>
+      <property name="shotcut:filter">noise_fast</property>
+      <property name="av.all_flags">a+t</property>
+      <property name="av.all_strength">66.7</property>
+    </filter>
+    <filter id="filter7" out="00:00:03.960">
+      <property name="version">2.7</property>
+      <property name="mlt_service">frei0r.bigsh0t_transform_360</property>
+      <property name="shotcut:filter">bigsh0t_transform_360</property>
+      <property name="yaw">0</property>
+      <property name="pitch">0</property>
+      <property name="roll">-2</property>
+      <property name="interpolation">1</property>
+      <property name="grid">0</property>
+    </filter>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer4" in="00:00:00.000" out="00:00:03.960"/>
+    <entry producer="producer5" in="00:00:00.000" out="00:00:03.960"/>
+    <blank length="00:00:00.720"/>
+    <entry producer="producer6" in="00:00:00.000" out="00:00:03.960"/>
+  </playlist>
+  <chain id="chain3" out="00:02:05.040">
+    <property name="length">00:02:05.080</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/ucscode/Downloads/keep-climbing.mp3</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="meta.media.nb_streams">1</property>
+    <property name="meta.media.0.stream.type">audio</property>
+    <property name="meta.media.0.codec.sample_fmt">fltp</property>
+    <property name="meta.media.0.codec.sample_rate">44100</property>
+    <property name="meta.media.0.codec.channels">2</property>
+    <property name="meta.media.0.codec.layout">stereo</property>
+    <property name="meta.media.0.codec.name">mp3float</property>
+    <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
+    <property name="meta.media.0.codec.bit_rate">320000</property>
+    <property name="meta.attr.0.stream.encoder.markup">Lavf</property>
+    <property name="meta.attr.encoder.markup">Google</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="creation_time">2026-04-01T06:16:43</property>
+    <property name="astream">0</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:hash">ed872e7cebf1c90c52462b7231b64854</property>
+    <property name="shotcut:caption">keep-climbing.mp3</property>
+    <filter id="filter8" out="00:00:12.680">
+      <property name="channel_mask">-1</property>
+      <property name="mlt_service">ladspa.1204</property>
+      <property name="shotcut:filter">3BandEq</property>
+      <property name="0">0</property>
+      <property name="1">200</property>
+      <property name="2">0.5</property>
+      <property name="3">0</property>
+      <property name="4">1000</property>
+      <property name="5">1</property>
+      <property name="6">0</property>
+      <property name="7">1000</property>
+      <property name="8">1</property>
+      <property name="9">0</property>
+      <property name="10">1000</property>
+      <property name="11">1</property>
+      <property name="12">0</property>
+      <property name="13">5000</property>
+      <property name="14">0.5</property>
+      <property name=".dummy"></property>
+      <property name="instances">2</property>
+    </filter>
+    <filter id="filter9" out="00:00:12.680">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.960=0</property>
+      <property name="channel_mask">-1</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">00:00:01.000</property>
+    </filter>
+  </chain>
+  <playlist id="playlist1">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A1</property>
+    <entry producer="chain3" in="00:00:00.000" out="00:00:12.680"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 26.2.26" in="00:00:00.000" out="00:00:12.680">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:processingMode">Native8Cpu</property>
+    <property name="shotcut:skipConvert">0</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1" hide="both"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="compositing">0</property>
+      <property name="distort">0</property>
+      <property name="rotate_center">0</property>
+      <property name="mlt_service">qtblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+  </tractor>
+</mlt>

@@ -56,7 +56,7 @@ describe('MLT VDOM Core Logic', () => {
         assert.strictEqual(contents[0].text, 'clip.mp4');
     });
 
-    test('XML Generation: Should build valid MLT structure', () => {
+    test('XML Generation: Should dump valid MLT structure', async () => {
         const mlt = new Mlt({ id: 'root' });
         const producer = new Mlt.Producer({ id: 'p1' });
         producer.add(new Mlt.Property({ name: 'res' }, 'file.mp4'));
@@ -70,7 +70,7 @@ describe('MLT VDOM Core Logic', () => {
         mlt.add(producer);
         mlt.add(playlist);
 
-        const xml = mlt.build();
+        const xml = await mlt.dump();
 
         // Verify XML Header
         assert.ok(xml.includes('<?xml version="1.0" encoding="utf-8"?>'));

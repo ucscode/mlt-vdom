@@ -2,9 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { Mlt } from '../index.js';
 
-const outputDir = path.join(process.cwd(), 'sample');
+const outputDir = path.join(process.cwd(), 'sample/xml');
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
-const outputFile = path.join(outputDir, 'output.mlt');
+const outputFile = path.join(outputDir, 'sample.mlt');
 
 console.log('🚀 Generating Rich MLT Project...');
 
@@ -80,7 +80,7 @@ mlt.add(profile)
    .add(timeline);
 
 // 7. Output
-const xmlString = mlt.build(true);
+const xmlString = await mlt.dump(true);
 
 try {
     fs.writeFileSync(outputFile, xmlString, 'utf8');

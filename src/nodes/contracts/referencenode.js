@@ -1,5 +1,5 @@
 import { ElementNode } from './elementnode.js';
-import { ALLOWED_REFERENCES } from '../libs/constants.js';
+import { ALLOWED_REFERENCES } from '../../constants/mlt-ref-anatomy.js';
 
 export class ReferenceNode extends ElementNode {
     constructor(tagName, attributes, content) {
@@ -13,18 +13,18 @@ export class ReferenceNode extends ElementNode {
     }
 
     bind(node) {
-        const myTag = this.factory.tagName;
+        const tagName = this.factory.tagName;
         const targetTag = node?.factory?.tagName;
 
         // 1. Structural Validation
-        const validTargets = ALLOWED_REFERENCES[myTag] || [];
+        const validTargets = this._allowedReferenceTags();
         if (!validTargets.includes(targetTag)) {
-            throw new Error(`bind Error: <${myTag}> cannot bind to <${targetTag}>.`);
+            throw new Error(`bind Error: <${tagName}> cannot bind to <${targetTag}>.`);
         }
 
         // 2. State/Safety Check
         if (this.getAttribute('producer')) {
-            throw new Error(`bind Error: <${myTag}> is already bound. Unbind first.`);
+            throw new Error(`bind Error: <${tagName}> is already bound. Unbind first.`);
         }
 
         const id = node.getAttribute('id');
@@ -49,5 +49,9 @@ export class ReferenceNode extends ElementNode {
 
     getBoundNode() {
         return this._boundNode;
+    }
+
+    _allowedReferenceTags() {
+        return ALLOWED_REFERENCES[this.factory.tagName] || [];
     }
 }

@@ -36,6 +36,10 @@
     "homepage": "https://github.com/ucscode/mlt-vdom#readme",
     "dependencies": {
         "jsdom": "^29.0.1",
-        "xml-formatter": "^3.7.0"
+        "xml-formatter": "^3.7.0",
+        "xml-js": "^1.6.11"
+    },
+    "devDependencies": {
+        "@types/node": "^25.5.0"
     }
 }
