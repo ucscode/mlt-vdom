@@ -1,5 +1,4 @@
 import { MltParser } from '../src/libs/parser.js';
-import { getMltRegistry } from '../src/libs/registry.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -8,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.join(__dirname, 'xml/shotcut.mlt');
 const dumpPath = path.join(__dirname, 'xml/dump.mlt');
 
-const parser = new MltParser(getMltRegistry());
+const parser = new MltParser();
 const nodes = await parser.parseFromFile(filePath);
 console.log(nodes);
 const string = await nodes[0].dump(true, dumpPath)

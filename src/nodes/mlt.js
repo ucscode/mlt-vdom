@@ -2,7 +2,6 @@ import fs from 'fs/promises';
 import format from 'xml-formatter';
 import { JSDOM } from 'jsdom';
 import { MLT_TAG } from '../constants/mlt-tag.js';
-import { getMltRegistry } from '../libs/registry.js';
 import { ElementNode } from './node-provider.js';
 import { MltParser } from '../libs/parser.js';
 import {
@@ -88,13 +87,13 @@ export class Mlt extends ElementNode {
 
     static load(xmlString) {
         // Inject the registry here. Explicit and safe.
-        const parser = new MltParser(getMltRegistry());
+        const parser = new MltParser();
         const nodes = parser.parse(xmlString);
         return this.#ensureRoot(nodes, 'provided XML string');
     }
 
     static async loadFromFile(filePath) {
-        const parser = new MltParser(getMltRegistry());
+        const parser = new MltParser();
         const nodes = await parser.parseFromFile(filePath);
         return this.#ensureRoot(nodes, `file "${filePath}"`);
     }

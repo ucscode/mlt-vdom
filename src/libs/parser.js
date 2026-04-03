@@ -1,15 +1,13 @@
 import fs from 'fs/promises';
 import convert from 'xml-js';
+import { getMltRegistry } from './registry.js';
 
 export class MltParser {
     /**
      * @param {Object} registry - A mapping of MLT_TAGs to their Class constructors.
      */
-    constructor(registry) {
-        if (!registry) {
-            throw new Error('[MltParser] A node registry must be provided to the constructor.');
-        }
-        this.registry = registry;
+    constructor(registry = null) {
+        this.registry = registry || getMltRegistry();
     }
 
     /**
